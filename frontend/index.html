@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrimeCut | Fresh cuts, weighed to order</title>
+  <meta name="description" content="Order fresh beef, pork, poultry and specialty cuts by the kilo from your local butcher.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>PrimeCut</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#board">Today's board</a>
+        <a href="#how">How it works</a>
+        <button class="link" data-theme-toggle type="button">Light / dark</button>
+        <span id="nav-cta" class="row">
+          <a href="login.html">Sign in</a>
+          <a class="btn btn-primary" href="register.html">Create account</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Cut to order. Weighed to the gram.</h1>
+          <p class="lead">Tell us how many kilos you want. We trim, weigh and pack it fresh, then hold it at the counter or send it to your door.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="register.html">Start an order</a>
+            <a class="btn" href="#board">See today's prices</a>
+          </div>
+        </div>
+        <aside class="board" id="board" aria-label="Today's price board">
+          <h2>On the counter today</h2>
+          <ul id="board-list"><li class="muted">Loading prices...</li></ul>
+          <p class="foot">Prices per kilo. Stock updates as orders come in.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Fresh in this morning</h2>
+        <p class="muted">Pick a cut, choose your weight, and we'll pack exactly that.</p>
+        <div class="cuts-grid" id="gallery"></div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2>How ordering works</h2>
+        <div class="steps">
+          <div class="card pad"><h3>Choose your cuts</h3><p class="muted">Browse beef, pork, poultry and exotics. Set any weight in 250 g steps.</p></div>
+          <div class="card pad"><h3>We pack it fresh</h3><p class="muted">Your stock is reserved the moment you order, so what you see is what's on the counter.</p></div>
+          <div class="card pad"><h3>Pick up or delivery</h3><p class="muted">Track your order from packing to ready. Pay at the counter or on delivery.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site"><div class="wrap row between"><span>PrimeCut Meatshop. Fresh cuts daily.</span><a href="login.html">Staff sign in</a></div></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

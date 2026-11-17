@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Back office | PrimeCut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="admin.html"><span class="logo-mark" aria-hidden="true"></span>PrimeCut back office</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="dashboard.html">View shop</a>
+        <button class="link" data-theme-toggle type="button">Light / dark</button>
+        <span class="muted small" id="who"></span>
+        <button class="link" id="sign-out" type="button">Sign out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" style="padding-top:1.5rem;padding-bottom:3rem">
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab" role="tab" data-view="overview" aria-selected="true">Overview</button>
+      <button class="tab" role="tab" data-view="orders" aria-selected="false">Orders</button>
+      <button class="tab" role="tab" data-view="products" aria-selected="false">Cuts and prices</button>
+      <button class="tab" role="tab" data-view="stock" aria-selected="false">Receive stock</button>
+      <button class="tab" role="tab" data-view="suppliers" aria-selected="false">Suppliers</button>
+      <button class="tab admin-only hidden" role="tab" data-view="users" aria-selected="false">Team</button>
+    </div>
+    <div id="view" aria-live="polite"></div>
+  </main>
+
+  <dialog id="modal">
+    <form id="modal-form" method="dialog">
+      <h2 id="modal-title"></h2>
+      <div id="modal-fields"></div>
+      <div class="row" style="justify-content:flex-end">
+        <button class="btn" type="button" id="modal-cancel">Cancel</button>
+        <button class="btn btn-primary" type="submit" id="modal-submit">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

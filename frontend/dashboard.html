@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My orders | PrimeCut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="dashboard.html"><span class="logo-mark" aria-hidden="true"></span>PrimeCut</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#shop" id="nav-shop" class="active">Cuts</a>
+        <a href="#orders" id="nav-orders">My orders</a>
+        <button class="link" id="open-cart" type="button">Order <span class="cart-count" id="cart-count">0</span></button>
+        <button class="link" data-theme-toggle type="button">Light / dark</button>
+        <button class="link" id="sign-out" type="button">Sign out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="view-shop">
+      <div class="page-head">
+        <h1 style="font-size:clamp(1.9rem,4vw,2.8rem)" id="greeting">Fresh cuts</h1>
+        <p class="muted">Choose a weight in 250 g steps. Your cuts are reserved when you place the order.</p>
+      </div>
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="Search cuts" aria-label="Search cuts">
+        <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+      </div>
+      <div class="product-grid" id="grid" aria-live="polite"></div>
+    </section>
+
+    <section id="view-orders" class="hidden">
+      <div class="page-head"><h1 style="font-size:clamp(1.9rem,4vw,2.8rem)">My orders</h1></div>
+      <div id="orders-list" style="padding-bottom:3rem"></div>
+    </section>
+  </main>
+
+  <div class="drawer-backdrop hidden" id="backdrop"></div>
+  <aside class="drawer hidden" id="drawer" aria-label="Your order">
+    <header class="row between"><h2 style="margin:0;font-size:1.4rem">Your order</h2><button class="btn btn-sm" id="close-cart" type="button">Close</button></header>
+    <div class="items" id="cart-items"></div>
+    <footer>
+      <div class="row between" style="margin-bottom:.75rem"><span>Total</span><strong class="price" id="cart-total">0</strong></div>
+      <button class="btn btn-primary" style="width:100%" id="place-order" type="button">Place order</button>
+      <p class="muted small" style="margin:.6rem 0 0">Pay at pickup or on delivery.</p>
+    </footer>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
